@@ -11,8 +11,17 @@ setup(name='directionFinder_web',
       install_requires = [
           'directionFinder_backend',
           'pyramid',
+          'pyramid_chameleon',
+          'pyramid_debugtoolbar',
+          'waitress',
       ],
       scripts = [
           'bin/run_directionFinder_web.py'
       ],
-      zip_safe = False)
+      test_suite="directionFinder_web",
+      zip_safe = False,
+      entry_points="""\
+      [paste.app_factory]
+      main = directionFinder_web:main
+      """
+      )
