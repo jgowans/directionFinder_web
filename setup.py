@@ -12,7 +12,7 @@ setup(name='directionFinder_web',
           'directionFinder_backend',
           'pyramid',
       ],
-      script = [
+      scripts = [
           'bin/run_directionFinder_web.py'
       ],
       zip_safe = False)
